@@ -2,27 +2,27 @@
 
 ## Develop
 
-1. [«Dev01»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev01/task.go). 
+1. [«Dev01 - Базовая задача »](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev01/task.go). 
     
-2. [«Dev02»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev02/task.go). 
+2. [«Dev02 - Задача на распаковку»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev02/task.go). 
     
-3. [«Dev03»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev03/task.go). 
+3. [«Dev03 - Утилита sort»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev03/task.go). 
     
-4. [«Dev04»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev04/task.go). 
+4. [«Dev04 - Поиск анаграмм по словарю»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev04/task.go). 
     
-5. [«Dev05»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev05/task.go). 
+5. [«Dev05 - Утилита grep»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev05/task.go). 
     
-6. [«Dev06»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev06/task.go). 
+6. [«Dev06 - Утилита cut»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev06/task.go). 
     
-7. [«Dev07»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev07/task.go). 
+7. [«Dev07 - Or channel»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev07/task.go). 
     
-8. [«Dev08»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev08/task.go). 
+8. [«Dev08 - Взаимодействие с ОС»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev08/task.go). 
     
-9. [«Dev09»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev09/task.go). 
+9. [«Dev09 - Утилита wget»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev09/task.go). 
     
-10. [«Dev10»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev10/task.go). 
+10. [«Dev10 - Утилита telnet»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev10/task.go). 
     
-11. [«Dev11»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev11/task.go). 
+11. [«Dev11 - HTTP-сервер»](https://github.com/verysaddrug/WBTech-L2/blob/main/develop/dev11/task.go). 
    
 ## Listing
 

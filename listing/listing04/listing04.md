@@ -19,6 +19,8 @@ func main() {
 
 Ответ:
 ```
-...
-
+print: 0-9
+fatal error: all goroutines are asleep - deadlock!
 ```
+
+Range продолжает ждать сообщения из незакрытого канала. 
