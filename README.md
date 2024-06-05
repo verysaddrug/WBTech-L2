@@ -1,12 +1,28 @@
-# WB Tech: level # 2 (Golang)
-## Как делать задания:
-Никаких устных решений — только код. Одно решение — один файл с хорошо откомментированным кодом. Каждое решение или невозможность решения надо объяснить.
+# WB Tech: level # 2
 
-Разрешается и приветствуется использование любых справочных ресурсов, привлечение сторонних экспертов и т.д. и т.п.
+## Develop
 
 
-Основной критерий оценки — четкое понимание «как это работает». Некоторые задачи можно решить несколькими способами, в этом случае требуется привести максимально возможное количество вариантов и обосновать наиболее оптимальный из них, если таковой имеется.
 
-Можно задавать вопросы, как по условию задач, так и об их решении.
+## Listing
 
-Для задач на разработку (/develop) все тест-кейсы должны быть оформлены в виде отдельных тестов.
+
+
+## Pattern
+
+1. Паттерн [«фасад»](https://github.com/verysaddrug/WBTech-L2/blob/main/pattern/01_facade/main.go). 
+    
+2. Паттерн [«строитель»](https://github.com/verysaddrug/WBTech-L2/blob/main/pattern/02_builder/main.go). 
+    
+3. Паттерн [«посетитель»](https://github.com/verysaddrug/WBTech-L2/blob/main/pattern/03_visitor/main.go). 
+    
+4. Паттерн [«команда»](https://github.com/verysaddrug/WBTech-L2/blob/main/pattern/04_command/main.go). 
+    
+5. Паттерн [«цепочка вызовов»](https://github.com/verysaddrug/WBTech-L2/blob/main/pattern/05_chain_of_resp/main.go). 
+    
+6. Паттерн [«фабричный метод»](https://github.com/verysaddrug/WBTech-L2/blob/main/pattern/06_factory_method/main.go). 
+    
+7. Паттерн [«стратегия»](https://github.com/verysaddrug/WBTech-L2/blob/main/pattern/07_strategy/main.go). 
+    
+8. Паттерн [«состояние»](https://github.com/verysaddrug/WBTech-L2/blob/main/pattern/08_state/main.go).
+
