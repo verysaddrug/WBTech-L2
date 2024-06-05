@@ -1,11 +1,17 @@
 package main
 
+import (
+	"fmt"
+	"sync"
+	"time"
+)
+
 /*
 === Or channel ===
 
 Реализовать функцию, которая будет объединять один или более done каналов в single канал если один из его составляющих каналов закроется.
 Одним из вариантов было бы очевидно написать выражение при помощи select, которое бы реализовывало эту связь,
-однако иногда неизестно общее число done каналов, с которыми вы работаете в рантайме.
+однако иногда неизвестно общее число done каналов, с которыми вы работаете в рантайме.
 В этом случае удобнее использовать вызов единственной функции, которая, приняв на вход один или более or каналов, реализовывала весь функционал.
 
 Определение функции:
@@ -17,8 +23,8 @@ sig := func(after time.Duration) <- chan interface{} {
 	go func() {
 		defer close(c)
 		time.Sleep(after)
-}()
-return c
+	}()
+	return c
 }
 
 start := time.Now()
@@ -30,9 +36,59 @@ start := time.Now()
 	sig(1*time.Minute),
 )
 
-fmt.Printf(“fone after %v”, time.Since(start))
+fmt.Printf("done after %v", time.Since(start))
 */
 
-func main() {
+// Функция or объединяет несколько done каналов в один
+func or(channels ...<-chan interface{}) <-chan interface{} {
+	// Создаем выходной канал
+	main := make(chan interface{})
 
+	// Вспомогательная функция для закрытия выходного канала
+	// Используем sync.Once для гарантии закрытия только один раз
+	var once sync.Once
+	closeMain := func() {
+		once.Do(func() {
+			close(main)
+		})
+	}
+
+	// Запускаем горутину для каждого входного канала
+	for _, ch := range channels {
+		go func(c <-chan interface{}) {
+			select {
+			case <-c:
+				closeMain()
+			case <-main:
+				// Выйти из горутины, если main канал закрыт
+				return
+			}
+		}(ch)
+	}
+
+	return main
+}
+
+func main() {
+	// Функция для создания канала, который закрывается через заданное время
+	sig := func(after time.Duration) <-chan interface{} {
+		c := make(chan interface{})
+		go func() {
+			defer close(c)
+			time.Sleep(after)
+		}()
+		return c
+	}
+
+	// Запуск функции or с несколькими сигналами
+	start := time.Now()
+	<-or(
+		sig(2*time.Hour),
+		sig(5*time.Minute),
+		sig(1*time.Second),
+		sig(1*time.Hour),
+		sig(1*time.Minute),
+	)
+
+	fmt.Printf("done after %v", time.Since(start))
 }
